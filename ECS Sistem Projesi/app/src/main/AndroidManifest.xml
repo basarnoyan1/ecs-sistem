@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="noyansoft.ecssistem">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+
+    <uses-feature android:name="android.hardware.sensor.accelerometer" />
+    <uses-feature android:name="android.hardware.Camera" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo3"
+        android:label="ECS Sistem"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".AuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="@string/app_name"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.ecselektrik.com"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".QuickSettingsService"
+            android:icon="@drawable/action_check"
+            android:label="@string/tile_check"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".QuickSettingsService2"
+            android:icon="@drawable/action_add"
+            android:label="@string/tile_add"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".QrReader"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="Barkod Okutun"
+            android:parentActivityName=".StokSayim"
+            android:resizeableActivity="true"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QrReader2"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="Barkod Okutun"
+            android:parentActivityName=".StokKontrol"
+            android:resizeableActivity="true"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActSecim"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="Ana Menü"
+            android:parentActivityName=".MainActivity"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Settings"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="Sunucu Ayarları"
+            android:parentActivityName=".SetMain"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SetMain"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="Ayarlar"
+            android:parentActivityName=".MainActivity"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QuerySettings"
+            android:label="Sorgu Ayarları"
+            android:parentActivityName=".SetMain" />
+        <activity
+            android:name=".DevSettings"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="Geliştirici Seçenekleri"
+            android:parentActivityName=".SetMain"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StokKontrol"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="Stok Kontrol"
+            android:parentActivityName=".ActSecim"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".StokSayim"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="Stok Sayım"
+            android:parentActivityName=".ActSecim"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".CihazBakim"
+            android:label="Bakım"
+            android:parentActivityName=".DevSettings"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Alerts"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="Uyarılar"
+            android:parentActivityName=".DevSettings"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".UpdateSet"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="Güncelleme Ayarları"
+            android:parentActivityName=".SetMain"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SayimListesi"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="Sayım Listesi"
+            android:parentActivityName=".StokSayim"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBar">
+        <intent-filter>
+            <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+        </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

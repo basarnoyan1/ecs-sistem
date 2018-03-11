@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>vercode</key>
+        <value>1.3.5</value>
+    </entry>
+    <entry>
+        <key>vercode_beta</key>
+        <value>1.3.5</value>
+    </entry>
+</defaultsMap>
+    <!-- END xml_defaults -->

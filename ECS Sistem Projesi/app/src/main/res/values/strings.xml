@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">ECS Sistem</string>
+    <string name="shortcut1" translatable="false">Kontrol</string>
+    <string name="shortcut1_long" translatable="false">Stok Kontrol</string>
+    <string name="shortcut2" translatable="false">Sayım</string>
+    <string name="shortcut2_long" translatable="false">Stok Sayım</string>
+    <string name="shortcut3" translatable="false">Güncelle</string>
+    <string name="shortcut3_long" translatable="false">Güncellemeleri Denetle</string>
+    <string name="shortcut_disabled" translatable="false">Kısayol devre dışıdır.</string>
+    <string name="tile_check" translatable="false">Stok Kontrol</string>
+    <string name="tile_add" translatable="false">Stok Sayım</string>
+    <string name="tile_label" translatable="false">Stok Kontrol2</string>
+    <string name="tile_label2" translatable="false">Stok Kontrol2</string>
+    <string name="service_inactive" translatable="false">Pasif</string>
+    <string name="service_active" translatable="false">Aktif</string>
+    <!-- Strings related to Settings -->
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-4737005977048886/4761817851</string>
+    <string name="title_activity_update_set" translatable="false">Güncelleme Ayarları</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general" translatable="false">General</string>
+
+    <string name="pref_title_social_recommendations" translatable="false">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations" translatable="false">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name" translatable="false">Display name</string>
+    <string name="pref_default_display_name" translatable="false">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages" translatable="false">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+
+    <string name="pref_title_sync_frequency" translatable="false">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings" translatable="false">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications" translatable="false">Notifications</string>
+
+    <string name="pref_title_new_message_notifications" translatable="false">New message notifications</string>
+
+    <string name="pref_title_ringtone" translatable="false">Ringtone</string>
+    <string name="pref_ringtone_silent" translatable="false">Silent</string>
+
+    <string name="pref_title_vibrate" translatable="false">Vibrate</string>
+    <string name="appwidget_text" translatable="false">EXAMPLE</string>
+    <string name="add_widget" translatable="false">Add widget</string>
+    <string name="user_name">Kullanıcı Adı</string>
+    <string name="password">Parola</string>
+    <string name="login">Giriş</string>
+    <string name="welcome_message">"Hoşgeldin, "</string>
+    <!-- Example General settings -->
+
+    <!-- Example settings for Data & Sync -->
+
+    <!-- Example settings for Notifications -->
+
+</resources>

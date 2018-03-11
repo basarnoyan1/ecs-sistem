@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="5"
+    android:padding="5dp"
+    android:layout_marginTop="2dp"
+    >
+
+    <TextView
+        android:id="@+id/lblproid"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Stok Kodu"
+        android:textAlignment="center"
+        android:textSize="16dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblproname"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Seri No"
+        android:textSize="16dip"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/lblprodesc"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="bottom|center_horizontal"
+        android:text="Depo"
+        android:textSize="16dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblmiktar"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:text="Miktar"
+        android:textSize="16dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lbltarih"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="right"
+        android:textSize="1sp" />
+
+    <TextView
+        android:id="@+id/lblaciklama"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:text="Açıklama"
+        android:textSize="16dip"
+        android:textStyle="bold" />
+</LinearLayout>
